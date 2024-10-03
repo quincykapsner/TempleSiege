@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -12,15 +13,27 @@ public class PlayerController : MonoBehaviour
     Vector2 movementInput;
     Rigidbody2D rb;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
+    private Animator animator;
+
+    private const string horizontal = "Horizontal";
+    private const string vertical = "Vertical";
+    private const string lastHorizontal = "LastHorizontal";
+    private const string lastVertical = "LastVertical";
 
     // Start is called before the first frame update
     void Start() {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate() {
-        // if movement is not 0, try to move
+        // if movement is not 0
         if (movementInput != Vector2.zero) {
+            // set idle animation
+            animator.SetFloat(lastHorizontal, movementInput.x);
+            animator.SetFloat(lastVertical, movementInput.y);
+
+            // try to move
             bool success = TryMove(movementInput);
 
             if (!success) {
@@ -31,6 +44,14 @@ public class PlayerController : MonoBehaviour
                     success = TryMove(new Vector2(0, movementInput.y));
                 }
             }
+
+            // set the animator values
+            animator.SetFloat(horizontal, movementInput.x);
+            animator.SetFloat(vertical, movementInput.y);
+        } else {
+            // if no movement, set the animator values to 0
+            animator.SetFloat(horizontal, 0);
+            animator.SetFloat(vertical, 0);
         }
     }
 
