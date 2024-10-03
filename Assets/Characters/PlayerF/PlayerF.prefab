@@ -10,11 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2176015049336069626}
   - component: {fileID: 1704542110192821734}
+<<<<<<< HEAD
   - component: {fileID: 286275366687381063}
   - component: {fileID: -1318941544794892369}
   - component: {fileID: 5510032659483383314}
   - component: {fileID: 9061733428905316459}
   - component: {fileID: 6913615588445607410}
+=======
+>>>>>>> parent of 3744942 (Added collision)
   m_Layer: 0
   m_Name: PlayerF
   m_TagString: Player
@@ -89,6 +92,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 --- !u!114 &286275366687381063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,3 +244,5 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+=======
+>>>>>>> parent of 3744942 (Added collision)
