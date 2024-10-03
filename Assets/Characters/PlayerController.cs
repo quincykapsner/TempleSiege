@@ -13,10 +13,12 @@ public class PlayerController : MonoBehaviour
 
     Vector2 movementInput;
     Rigidbody2D rb;
+    Animator animator;
 
     // Start is called before the first frame update
     void Start() {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate() {
@@ -32,7 +34,14 @@ public class PlayerController : MonoBehaviour
                     success = TryMove(new Vector2(0, movementInput.y));
                 }
             }
+            // set animator to moving if player is moving
+            animator.SetBool("IsMoving", success);
+        } else {
+            // set animator to idle if player is not moving
+            animator.SetBool("IsMoving", false);
         }
+
+
     }
 
     private bool TryMove(Vector2 direction) {
