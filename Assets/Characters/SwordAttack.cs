@@ -6,31 +6,30 @@ public class SwordAttack : MonoBehaviour
 { 
     public float damage = 1;
     Vector2 attackOffset; 
-    Collider2D swordCollider;
+    public Collider2D swordCollider;
 
     public void Start() {
-        swordCollider = GetComponent<Collider2D>();
-        attackOffset = transform.position;
+        attackOffset = Vector2.zero;
     }
 
     public void AttackDown() {
         swordCollider.enabled = true;
-        transform.position = attackOffset + new Vector2(0, -0.2f);
+        transform.localPosition = attackOffset + new Vector2(0, -0.15f);
     }
 
     public void AttackUp() {
         swordCollider.enabled = true;
-        transform.position = attackOffset + new Vector2(0, 0.2f);
+        transform.localPosition = attackOffset + new Vector2(0, 0.15f);
     }
 
     public void AttackLeft() {
         swordCollider.enabled = true;
-        transform.position = attackOffset + new Vector2(-0.2f, 0);
+        transform.localPosition = attackOffset + new Vector2(-0.15f, 0);
     }
 
     public void AttackRight() {
         swordCollider.enabled = true;
-        transform.position = attackOffset + new Vector2(0.2f, 0);
+        transform.localPosition = attackOffset + new Vector2(0.15f, 0);
     }
 
     public void StopAttack() {

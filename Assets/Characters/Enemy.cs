@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    Animator animator;
+
     public float Health {
         set {
             health = value;
@@ -20,7 +22,15 @@ public class Enemy : MonoBehaviour
 
     public float health = 1;
 
+    public void Start() {
+        animator = GetComponent<Animator>();
+    }
+
     public void Defeated() {
-        Destroy(gameObject); 
+        animator.SetTrigger("Defeated");
+    }
+
+    public void RemoveEnemy() {
+        Destroy(gameObject);
     }
 }

@@ -84,6 +84,7 @@ public class PlayerController : MonoBehaviour
 
     void OnFire() {
         animator.SetTrigger("SwordAttack");
+        SwordAttack();
     }
 
     public void SwordAttack() {
@@ -99,6 +100,11 @@ public class PlayerController : MonoBehaviour
         } else if (animator.GetFloat(lastVertical) < 0) {
             swordAttack.AttackDown();
         }
+    }
+
+    public void EndSwordAttack() {
+        UnlockMovement();
+        swordAttack.StopAttack();
     }
 
     public void LockMovement() {
