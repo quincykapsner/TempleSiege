@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 1f;
     public float collisionOffset = 0.02f;
     public ContactFilter2D movementFilter;
+    public SwordAttack swordAttack;
 
     Vector2 movementInput;
     Rigidbody2D rb;
@@ -20,6 +21,8 @@ public class PlayerController : MonoBehaviour
     private const string lastHorizontal = "LastHorizontal";
     private const string lastVertical = "LastVertical";
 
+    bool canMove = true;
+
     // Start is called before the first frame update
     void Start() {
         rb = GetComponent<Rigidbody2D>();
@@ -27,31 +30,33 @@ public class PlayerController : MonoBehaviour
     }
 
     private void FixedUpdate() {
-        // if movement is not 0
-        if (movementInput != Vector2.zero) {
-            // set idle animation
-            animator.SetFloat(lastHorizontal, movementInput.x);
-            animator.SetFloat(lastVertical, movementInput.y);
+        // if player is allowed to move (like when not attacking)
+        if (canMove) {
+            // if movement is not 0
+            if (movementInput != Vector2.zero) {
+                // set idle animation
+                animator.SetFloat(lastHorizontal, movementInput.x);
+                animator.SetFloat(lastVertical, movementInput.y);
 
-            // try to move
-            bool success = TryMove(movementInput);
-
-            if (!success) {
-                // if movement was not successful, try to move on the X axis
-                success = TryMove(new Vector2(movementInput.x, 0));
+                // try to move
+                bool success = TryMove(movementInput);
                 if (!success) {
-                    // if x movement was not successful, try to move on the Y axis
-                    success = TryMove(new Vector2(0, movementInput.y));
+                    // if movement was not successful, try to move on the X axis
+                    success = TryMove(new Vector2(movementInput.x, 0));
+                    if (!success) {
+                        // if x movement was not successful, try to move on the Y axis
+                        success = TryMove(new Vector2(0, movementInput.y));
+                    }
                 }
-            }
 
-            // set the animator values
-            animator.SetFloat(horizontal, movementInput.x);
-            animator.SetFloat(vertical, movementInput.y);
-        } else {
-            // if no movement, set the animator values to 0
-            animator.SetFloat(horizontal, 0);
-            animator.SetFloat(vertical, 0);
+                // set the animator values
+                animator.SetFloat(horizontal, movementInput.x);
+                animator.SetFloat(vertical, movementInput.y);
+            } else {
+                // if no movement, set the animator values to 0
+                animator.SetFloat(horizontal, 0);
+                animator.SetFloat(vertical, 0);
+            }
         }
     }
 
@@ -75,5 +80,32 @@ public class PlayerController : MonoBehaviour
 
     void OnMove(InputValue movementValue) {
         movementInput = movementValue.Get<Vector2>(); 
+    }
+
+    void OnFire() {
+        animator.SetTrigger("SwordAttack");
+    }
+
+    public void SwordAttack() {
+        LockMovement();
+        
+        // determine attack direction based on last movement direction
+        if (animator.GetFloat(lastHorizontal) > 0) {
+            swordAttack.AttackRight();
+        } else if (animator.GetFloat(lastHorizontal) < 0) {
+            swordAttack.AttackLeft();
+        } else if (animator.GetFloat(lastVertical) > 0) {
+            swordAttack.AttackUp();
+        } else if (animator.GetFloat(lastVertical) < 0) {
+            swordAttack.AttackDown();
+        }
+    }
+
+    public void LockMovement() {
+        canMove = false;
+    }
+
+    public void UnlockMovement() {
+        canMove = true;
     }
 }
