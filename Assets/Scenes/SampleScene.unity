@@ -22852,6 +22852,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5043967825891973482, guid: c0314d1193fb38a4ca091f6247ac569e, type: 3}
+      propertyPath: m_Size.y
+      value: 0.25102994
+      objectReference: {fileID: 0}
+    - target: {fileID: 5043967825891973482, guid: c0314d1193fb38a4ca091f6247ac569e, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.23448505
+      objectReference: {fileID: 0}
     - target: {fileID: 6425834172154455180, guid: c0314d1193fb38a4ca091f6247ac569e, type: 3}
       propertyPath: m_Name
       value: Statue
