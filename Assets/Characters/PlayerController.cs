@@ -60,6 +60,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // ============ movement ============
+
     private bool TryMove(Vector2 direction) {
         // check for potential collisions
             int count = rb.Cast(
@@ -81,6 +83,8 @@ public class PlayerController : MonoBehaviour
     void OnMove(InputValue movementValue) {
         movementInput = movementValue.Get<Vector2>(); 
     }
+
+    // ========= sword attack stuff =========
 
     void OnFire() {
         animator.SetTrigger("SwordAttack");

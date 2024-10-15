@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IDamageable
 {
     Animator animator;
 
@@ -33,4 +33,6 @@ public class Enemy : MonoBehaviour
     public void RemoveEnemy() {
         Destroy(gameObject);
     }
+
+    
 }
