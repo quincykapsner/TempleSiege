@@ -4,15 +4,8 @@ using UnityEngine;
 
 public interface IDamageable 
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public float Health { set; get; }
+    public void OnHit(float damage, Vector2 knockback);
+    public void OnHit(float damage); // if no knockback is needed
+    public void RemoveEnemy();
 }

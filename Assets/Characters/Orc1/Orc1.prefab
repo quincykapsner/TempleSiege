@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1389308575792114076}
   - component: {fileID: 586904479234225191}
   - component: {fileID: -5715044659584847868}
-  - component: {fileID: -7378341147020233045}
-  - component: {fileID: 304899301431563166}
+  - component: {fileID: 6773478560423683915}
   - component: {fileID: 4235128976942702190}
+  - component: {fileID: -2606414872710992026}
   m_Layer: 0
   m_Name: Orc1
   m_TagString: Enemy
@@ -115,8 +115,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &-7378341147020233045
-BoxCollider2D:
+--- !u!70 &6773478560423683915
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -147,32 +147,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.010162935, y: 0.040932223}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
-    newSize: {x: 0.64, y: 0.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.24294671, y: 0.2837014}
-  m_EdgeRadius: 1
---- !u!114 &304899301431563166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1994956517898968220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a998b8b33ebfd0048a5f23921fd9e33a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
+  m_Offset: {x: -0.009200215, y: 0.040512264}
+  m_Size: {x: 0.24274182, y: 0.2826475}
+  m_Direction: 0
 --- !u!95 &4235128976942702190
 Animator:
   serializedVersion: 5
@@ -194,3 +171,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-2606414872710992026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994956517898968220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d59d7bd3579dc24dbde1b1f8353517b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1

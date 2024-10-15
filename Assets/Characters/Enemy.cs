@@ -7,6 +7,9 @@ using UnityEngine;
 public class Enemy : MonoBehaviour, IDamageable
 {
     Animator animator;
+    Rigidbody2D rb;
+
+    public float health;
 
     public float Health {
         set {
@@ -20,10 +23,9 @@ public class Enemy : MonoBehaviour, IDamageable
         }
     }
 
-    public float health = 1;
-
-    public void Start() {
+    public virtual void Start() {
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     public void Defeated() {
@@ -34,5 +36,14 @@ public class Enemy : MonoBehaviour, IDamageable
         Destroy(gameObject);
     }
 
-    
+    public void OnHit(float damage, Vector2 knockback)
+    {
+        Health -= damage;
+        rb.AddForce(knockback);
+    }
+
+    public void OnHit(float damage)
+    {
+        Health -= damage;
+    }
 }

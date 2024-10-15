@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3807864103031892230}
   - component: {fileID: 1866338705360719872}
   - component: {fileID: -3720295271591671201}
-  - component: {fileID: 7396905485343979445}
+  - component: {fileID: 1058952094800845107}
   - component: {fileID: 3940811932418308589}
   m_Layer: 0
   m_Name: PlayerF
@@ -162,7 +162,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 75
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -176,8 +176,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &7396905485343979445
-BoxCollider2D:
+--- !u!70 &1058952094800845107
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -208,19 +208,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.004893422, y: -0.087538585}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
-    newSize: {x: 0.64, y: 0.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.09038699, y: 0.056250304}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.0046712346, y: -0.0739283}
+  m_Size: {x: 0.088519596, y: 0.094006896}
+  m_Direction: 0
 --- !u!95 &3940811932418308589
 Animator:
   serializedVersion: 5
@@ -333,4 +323,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  knockbackForce: 75
   swordCollider: {fileID: 1265534367866909887}
