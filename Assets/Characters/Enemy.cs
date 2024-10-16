@@ -7,8 +7,10 @@ using UnityEngine;
 public class Enemy : MonoBehaviour, IDamageable
 {
     Animator animator;
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
 
+    public float moveSpeed = 50f;
+    public bool atSomething = false; // tracking when enemy is next to something
     public float health;
 
     public float Health {

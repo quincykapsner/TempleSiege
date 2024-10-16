@@ -147,8 +147,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.009916842, y: 0.040512264}
-  m_Size: {x: 0.20450771, y: 0.2826475}
+  m_Offset: {x: 0.010643095, y: 0.021531522}
+  m_Size: {x: 0.15222448, y: 0.17061841}
   m_Direction: 0
 --- !u!95 &4235128976942702190
 Animator:
@@ -183,4 +183,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d59d7bd3579dc24dbde1b1f8353517b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: -5715044659584847868}
+  moveSpeed: 50
+  atSomething: 0
   health: 1
+  statue: {fileID: 6425834172154455180, guid: c0314d1193fb38a4ca091f6247ac569e, type: 3}
+  hitboxCollider: {fileID: 6773478560423683915}

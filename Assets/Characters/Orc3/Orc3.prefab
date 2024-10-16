@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 5648079260361042187}
   - component: {fileID: 5501114359003702512}
   - component: {fileID: 6564661890457828652}
+  - component: {fileID: 8635791062352165167}
   m_Layer: 0
   m_Name: Orc3
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 249067503, guid: 2cd02c9b94655c54ea71f7282d442f37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -147,8 +148,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.005871162, y: 0.05411111}
-  m_Size: {x: 0.29225764, y: 0.35977766}
+  m_Offset: {x: 0.0058711767, y: 0.0105308}
+  m_Size: {x: 0.1513077, y: 0.20329744}
   m_Direction: 0
 --- !u!95 &5501114359003702512
 Animator:
@@ -183,3 +184,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d80bd1124f4af3a4b92bcb861b9d7def, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 6800028102685833518}
+  moveSpeed: 50
+  atSomething: 0
+  health: 5
+  statue: {fileID: 6425834172154455180, guid: c0314d1193fb38a4ca091f6247ac569e, type: 3}
+  player: {fileID: 0}
+  detectionCollider: {fileID: 8635791062352165167}
+  hitboxCollider: {fileID: 5648079260361042187}
+--- !u!58 &8635791062352165167
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4228597789373672794}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.038000017, y: 0.038999945}
+  serializedVersion: 2
+  m_Radius: 0.75
