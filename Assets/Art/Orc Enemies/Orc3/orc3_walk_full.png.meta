@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,7 +95,511 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: orc3_walk_full_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 210
+        width: 37
+        height: 36
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1674d538121d75d4f868bb24e91940af
+      internalID: 581510697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_walk_full_1
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 210
+        width: 37
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79bea1c8c000d9e428c55d58698bb924
+      internalID: 1821426611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_walk_full_2
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 210
+        width: 37
+        height: 38
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f37e89a5e3a480745ac4b1c21f53f379
+      internalID: -1937226899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_walk_full_3
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 210
+        width: 37
+        height: 36
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f2b2dc171ce9d84bae8a107fc88efe9
+      internalID: 2080966228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_walk_full_4
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 210
+        width: 37
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d5daaabfdb0dc84b839bda2f080019b
+      internalID: -1860859317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_walk_full_5
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 210
+        width: 37
+        height: 38
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a744fde209f69429160373bb4954dd
+      internalID: -294317829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_walk_full_6
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 146
+        width: 37
+        height: 36
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c011c615962e52e4e9c61d908054f765
+      internalID: -1898639061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_walk_full_7
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 146
+        width: 37
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f1ea425d99d61d40ac251f95376dae0
+      internalID: -1900999883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_walk_full_8
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 146
+        width: 37
+        height: 38
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa6e13ad6b906d64eb96cb6f2db9d073
+      internalID: 39936416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_walk_full_9
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 146
+        width: 37
+        height: 36
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90114b239a4f26d48a61c73b0545a200
+      internalID: 799601764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_walk_full_10
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 146
+        width: 37
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e0968057692d484585ef2f49223b8b1
+      internalID: 1539703228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_walk_full_11
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 146
+        width: 37
+        height: 38
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9faa1458574fa3740972544dc0adcf5a
+      internalID: 9023372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_walk_full_12
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 82
+        width: 27
+        height: 40
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 901ebde830108484e991bd43dde3fc81
+      internalID: -1379925315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_walk_full_13
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 82
+        width: 29
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b21fda94af8c8f8468b56faf70bb340e
+      internalID: -985977620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_walk_full_14
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 82
+        width: 30
+        height: 40
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccf8e4e5bb9654044b38eb6dd23dece5
+      internalID: -2001081362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_walk_full_15
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 82
+        width: 31
+        height: 40
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07218311d1ad46a4bbf07ba6a7c16135
+      internalID: 145208624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_walk_full_16
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 82
+        width: 29
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 352ec50927e9a074e8f13651b11984ae
+      internalID: 1270233176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_walk_full_17
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 82
+        width: 28
+        height: 40
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf57960234299a4681e5c08cf77ac28
+      internalID: 112701463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_walk_full_18
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 18
+        width: 27
+        height: 40
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5976e73d06453540ad26b71a1f0b6cd
+      internalID: 1533757497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_walk_full_19
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 18
+        width: 29
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb6ee964d9457af4a91cdcc38175ed0b
+      internalID: 1744130435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_walk_full_20
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 18
+        width: 30
+        height: 40
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beb63bfabd897084ba613e432ab688bd
+      internalID: 1755663969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_walk_full_21
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 18
+        width: 32
+        height: 40
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0ae727ee64af53419a4fddea605e393
+      internalID: 830659939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_walk_full_22
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 18
+        width: 29
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dcd46e04f457ea45a5170583daf298f
+      internalID: 1382009782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_walk_full_23
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 18
+        width: 28
+        height: 40
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aa017e2acefe444aa94e25a36697905
+      internalID: 1211223243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +610,31 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      orc3_walk_full_0: 581510697
+      orc3_walk_full_1: 1821426611
+      orc3_walk_full_10: 1539703228
+      orc3_walk_full_11: 9023372
+      orc3_walk_full_12: -1379925315
+      orc3_walk_full_13: -985977620
+      orc3_walk_full_14: -2001081362
+      orc3_walk_full_15: 145208624
+      orc3_walk_full_16: 1270233176
+      orc3_walk_full_17: 112701463
+      orc3_walk_full_18: 1533757497
+      orc3_walk_full_19: 1744130435
+      orc3_walk_full_2: -1937226899
+      orc3_walk_full_20: 1755663969
+      orc3_walk_full_21: 830659939
+      orc3_walk_full_22: 1382009782
+      orc3_walk_full_23: 1211223243
+      orc3_walk_full_3: 2080966228
+      orc3_walk_full_4: -1860859317
+      orc3_walk_full_5: -294317829
+      orc3_walk_full_6: -1898639061
+      orc3_walk_full_7: -1900999883
+      orc3_walk_full_8: 39936416
+      orc3_walk_full_9: 799601764
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

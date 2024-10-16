@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,7 +95,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: orc3_idle_full_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 210
+        width: 38
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df49c4cef0ddb1b40b3d47179f9d08a6
+      internalID: 249067503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_idle_full_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 210
+        width: 38
+        height: 40
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c76abd9d5a1fb524d802ae5ced503e61
+      internalID: -2054897882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_idle_full_2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 210
+        width: 38
+        height: 40
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d08ff8851337004795dde0df65f5e27
+      internalID: 2010501865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_idle_full_3
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 210
+        width: 38
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92eabd3d20ad56c48bddb332f97bfa9a
+      internalID: -1780816792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_idle_full_4
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 146
+        width: 38
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c35b8b562e5595941ba65b70a6804d95
+      internalID: 1864350865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_idle_full_5
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 146
+        width: 38
+        height: 40
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 920333b9d0c387b4d81007517278421e
+      internalID: 1807867414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_idle_full_6
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 146
+        width: 38
+        height: 40
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bcb5d4fa3ca7524eb67599ba278371f
+      internalID: 1335232604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_idle_full_7
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 146
+        width: 38
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 185fa5f56830f74409266944d17c56e4
+      internalID: 940513294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_idle_full_8
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 82
+        width: 28
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf81e18822705134c879b32974b8694f
+      internalID: 482652309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_idle_full_9
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 82
+        width: 29
+        height: 40
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02d689be267311e48a4c88078a20aad4
+      internalID: 601919330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_idle_full_10
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 82
+        width: 29
+        height: 40
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e55584a515d0c8e40baf7da97d128b93
+      internalID: 644471432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_idle_full_11
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 82
+        width: 29
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 101f5854ea62f8f4a8004e7f747e7601
+      internalID: -403589970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_idle_full_12
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 18
+        width: 26
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeacac55c18cded41ad49ddb877373cf
+      internalID: 1599457635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_idle_full_13
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 18
+        width: 25
+        height: 40
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a01a55bdbac4084c8afa6595792f065
+      internalID: 2024678128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_idle_full_14
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 18
+        width: 25
+        height: 40
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a481ca6586c257b4885c2d23105cae5e
+      internalID: 118346787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: orc3_idle_full_15
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 18
+        width: 25
+        height: 39
+      alignment: 9
+      pivot: {x: 0.6, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 977303f6822145747aceabc30a6ab5e6
+      internalID: 1228880150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +442,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      orc3_idle_full_0: 249067503
+      orc3_idle_full_1: -2054897882
+      orc3_idle_full_10: 644471432
+      orc3_idle_full_11: -403589970
+      orc3_idle_full_12: 1599457635
+      orc3_idle_full_13: 2024678128
+      orc3_idle_full_14: 118346787
+      orc3_idle_full_15: 1228880150
+      orc3_idle_full_2: 2010501865
+      orc3_idle_full_3: -1780816792
+      orc3_idle_full_4: 1864350865
+      orc3_idle_full_5: 1807867414
+      orc3_idle_full_6: 1335232604
+      orc3_idle_full_7: 940513294
+      orc3_idle_full_8: 482652309
+      orc3_idle_full_9: 601919330
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
