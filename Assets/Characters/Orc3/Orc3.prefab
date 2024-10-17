@@ -186,7 +186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 6800028102685833518}
   moveSpeed: 50
-  atSomething: 0
+  canMove: 1
   health: 5
   statue: {fileID: 6425834172154455180, guid: c0314d1193fb38a4ca091f6247ac569e, type: 3}
   player: {fileID: 0}
@@ -226,4 +226,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.038000017, y: 0.038999945}
   serializedVersion: 2
-  m_Radius: 0.75
+  m_Radius: 1

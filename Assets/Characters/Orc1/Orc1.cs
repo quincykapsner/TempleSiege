@@ -17,7 +17,7 @@ public class Orc1 : Enemy
     }
 
     void FixedUpdate() {
-        if (!atSomething && statue != null) {
+        if (canMove && statue != null) {
             // if statue exists, move towards statue
             Vector2 direction = (statue.transform.position - transform.position).normalized; // calculate direction towards statue
             rb.AddForce(direction * moveSpeed * Time.deltaTime); // move towards statue
@@ -28,7 +28,7 @@ public class Orc1 : Enemy
     void OnCollisionEnter2D(Collision2D collision) {
         // this triggers when enemy hitbox collides with statue
         if (collision.collider.CompareTag("Statue")) { 
-            atSomething = true;
+            LockMovement();
             rb.velocity = Vector2.zero;
         }
     }
@@ -36,7 +36,7 @@ public class Orc1 : Enemy
     void OnCollisionExit2D(Collision2D collision) {
         // this triggers when enemy hitbox no longer collides with statue
         if (collision.collider.CompareTag("Statue")) { 
-            atSomething = false;
+            UnlockMovement();
         }
     }
 

@@ -15,23 +15,23 @@ public class SwordAttack : MonoBehaviour
     }
 
     public void AttackDown() {
-        swordCollider.enabled = true;
         transform.localPosition = attackOffset + new Vector2(0, -0.15f);
+        swordCollider.enabled = true;
     }
 
     public void AttackUp() {
-        swordCollider.enabled = true;
         transform.localPosition = attackOffset + new Vector2(0, 0.15f);
+        swordCollider.enabled = true;
     }
 
     public void AttackLeft() {
-        swordCollider.enabled = true;
         transform.localPosition = attackOffset + new Vector2(-0.15f, 0);
+        swordCollider.enabled = true;
     }
 
     public void AttackRight() {
-        swordCollider.enabled = true;
         transform.localPosition = attackOffset + new Vector2(0.15f, 0);
+        swordCollider.enabled = true;
     }
 
     public void StopAttack() {

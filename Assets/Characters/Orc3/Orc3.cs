@@ -23,7 +23,7 @@ public class Orc3 : Enemy
     }
 
     void FixedUpdate() {
-        if(!atSomething){
+        if(canMove){
             if (player != null) {
                 // if player is detected, move towards player
                 Vector2 direction = (player.transform.position - transform.position).normalized; // calculate direction towards player
@@ -41,7 +41,7 @@ public class Orc3 : Enemy
     void OnTriggerEnter2D(Collider2D detectedObj) {
         // this triggers when player enters detection range
         if (detectedObj.CompareTag("Player")) {
-            atSomething = false; // allow the orc3 to move again if it was at the statue
+            UnlockMovement(); // allow the orc3 to move again if it was at the statue
             player = detectedObj.gameObject;
         }
     }
@@ -56,7 +56,7 @@ public class Orc3 : Enemy
     void OnCollisionEnter2D(Collision2D collision) {
         // this triggers when enemy hitbox collides with player or statue
         if (collision.collider.CompareTag("Player") || collision.collider.CompareTag("Statue")) {
-            atSomething = true;
+            LockMovement();
             rb.velocity = Vector2.zero; // stop moving
 
             // ====== add attacking stuff
@@ -66,7 +66,7 @@ public class Orc3 : Enemy
     void OnCollisionExit2D(Collision2D collision) {
         // this triggers when enemy hitbox no longer collides with player or statue
         if (collision.collider.CompareTag("Player") || collision.collider.CompareTag("Statue")) { 
-            atSomething = false;
+            UnlockMovement();
         }
     }
 }

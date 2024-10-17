@@ -10,7 +10,8 @@ public class Enemy : MonoBehaviour, IDamageable
     public Rigidbody2D rb;
 
     public float moveSpeed = 50f;
-    public bool atSomething = false; // tracking when enemy is next to something
+    //public bool atSomething = false; // tracking when enemy is next to something
+    public bool canMove = true;
     public float health;
 
     public float Health {
@@ -47,5 +48,13 @@ public class Enemy : MonoBehaviour, IDamageable
     public void OnHit(float damage)
     {
         Health -= damage;
+    }
+
+    public void LockMovement() {
+        canMove = false;
+    }
+
+    public void UnlockMovement() {
+        canMove = true;
     }
 }
