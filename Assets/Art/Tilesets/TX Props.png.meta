@@ -185,11 +185,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 445
-        y: 435
+        y: 444
         width: 37
-        height: 56
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,6 +197,27 @@ TextureImporter:
       bones: []
       spriteID: 9468aff659417374684ce9edb79f7bf0
       internalID: -504431213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TX Props_3
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 419
+        width: 37
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa4039ca454ab014ab6b9d993a716bdb
+      internalID: -54561987
       vertices: []
       indices: 
       edges: []
