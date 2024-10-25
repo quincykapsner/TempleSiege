@@ -88,12 +88,12 @@ public class PlayerController : MonoBehaviour
 
     void OnFire() {
         animator.SetTrigger("SwordAttack");
-        SwordAttack();
     }
 
     public void SwordAttack() {
+        // called in animation event at start of attack animation
         LockMovement();
-        
+
         // determine attack direction based on last movement direction
         if (animator.GetFloat(lastHorizontal) > 0) {
             swordAttack.AttackRight();
@@ -107,6 +107,7 @@ public class PlayerController : MonoBehaviour
     }
 
     public void EndSwordAttack() {
+        // called in animation event at end of attack animation
         UnlockMovement();
         swordAttack.StopAttack();
     }

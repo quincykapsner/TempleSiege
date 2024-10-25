@@ -38,6 +38,9 @@ public class Orc3 : Enemy
 
     }
 
+    // ========= player detect stuff ========= 
+    /* currently circle collider is turned off bc player attacks hit it but i 
+    need to focus on other stuff */
     void OnTriggerEnter2D(Collider2D detectedObj) {
         // this triggers when player enters detection range
         if (detectedObj.CompareTag("Player")) {
@@ -53,6 +56,7 @@ public class Orc3 : Enemy
         }
     }
 
+    // ========= hitbox stuff ========= 
     void OnCollisionEnter2D(Collision2D collision) {
         // this triggers when enemy hitbox collides with player or statue
         if (collision.collider.CompareTag("Player") || collision.collider.CompareTag("Statue")) {
