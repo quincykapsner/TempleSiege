@@ -8,7 +8,7 @@ public class Statue : MonoBehaviour, IDamageable
         set {
             health = value;
             if (health <= 0) {
-                StatueDestroyed();
+                Defeated();
             }
         }
         get {
@@ -16,19 +16,20 @@ public class Statue : MonoBehaviour, IDamageable
         }
     }
     public float health = 100f;
-    
-    public void OnHit(float damage, Vector2 knockback) { }  // dont need, statue has no knockback
+
+    public void OnHit(float damage, Vector2 knockback) { 
+        Health -= damage;
+        // no knockback for statue so just ignore it
+    }  
 
     public void OnHit(float damage)
     {
         Health -= damage;
     }
 
-    public void RemoveEnemy() { } // dont need, if statue dies its game over
-
-    public void StatueDestroyed() {
-        //what to do when statue is destroyed
-    }
+    public void Defeated() { 
+        // game over stuff
+    } 
 
     // Start is called before the first frame update
     void Start()

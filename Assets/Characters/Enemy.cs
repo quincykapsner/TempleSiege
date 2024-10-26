@@ -18,7 +18,7 @@ public class Enemy : MonoBehaviour, IDamageable
         set {
             health = value;
             if (health <= 0) {
-                Defeated();
+                Death();
             }
         }
         get {
@@ -31,11 +31,12 @@ public class Enemy : MonoBehaviour, IDamageable
         rb = GetComponent<Rigidbody2D>();
     }
 
-    public void Defeated() {
+    public void Death() {
+        // must be separate from defeated to allow for animations
         animator.SetTrigger("Defeated");
     }
 
-    public void RemoveEnemy() {
+    public void Defeated() {
         Destroy(gameObject);
     }
 

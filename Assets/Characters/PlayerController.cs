@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         if (canMove) {
             // if movement is not 0
             if (movementInput != Vector2.zero) {
-                // set idle animation
+                // set lastHorizontal and lastVertical 
                 animator.SetFloat(lastHorizontal, movementInput.x);
                 animator.SetFloat(lastVertical, movementInput.y);
 
@@ -94,15 +94,23 @@ public class PlayerController : MonoBehaviour
         // called in animation event at start of attack animation
         LockMovement();
 
-        // determine attack direction based on last movement direction
-        if (animator.GetFloat(lastHorizontal) > 0) {
-            swordAttack.AttackRight();
-        } else if (animator.GetFloat(lastHorizontal) < 0) {
-            swordAttack.AttackLeft();
-        } else if (animator.GetFloat(lastVertical) > 0) {
-            swordAttack.AttackUp();
-        } else if (animator.GetFloat(lastVertical) < 0) {
-            swordAttack.AttackDown();
+        // determine attack direction based on dominant axis
+        float absHorizontal = Mathf.Abs(animator.GetFloat(lastHorizontal));
+        float absVertical = Mathf.Abs(animator.GetFloat(lastVertical));
+        if (absHorizontal > absVertical) {
+            // prioritize horizontal direction
+            if (animator.GetFloat(lastHorizontal) > 0) {
+                swordAttack.AttackRight();
+            } else {
+                swordAttack.AttackLeft();
+            }
+        } else {
+            // prioritize vertical direction
+            if (animator.GetFloat(lastVertical) > 0) {
+                swordAttack.AttackUp();
+            } else {
+                swordAttack.AttackDown();
+            }
         }
     }
 
