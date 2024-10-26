@@ -99,19 +99,18 @@ public class Orc1 : Enemy
         // called in animation event at start of attack animation
         LockMovement();
 
-        // determine attack direction based on dominant axis
-        float absHorizontal = Mathf.Abs(animator.GetFloat(lastHorizontal));
-        float absVertical = Mathf.Abs(animator.GetFloat(lastVertical));
-        if (absHorizontal > absVertical) {
+        // determine attack direction based on direction to statue
+        Vector2 attackDirection = (statue.transform.position - transform.position).normalized;
+        if (Mathf.Abs(attackDirection.x) > Mathf.Abs(attackDirection.y)) {
             // prioritize horizontal direction
-            if (animator.GetFloat(lastHorizontal) > 0) {
+            if (attackDirection.x > 0) {
                 swordAttack.AttackRight();
             } else {
                 swordAttack.AttackLeft();
             }
         } else {
             // prioritize vertical direction
-            if (animator.GetFloat(lastVertical) > 0) {
+            if (attackDirection.y > 0) {
                 swordAttack.AttackUp();
             } else {
                 swordAttack.AttackDown();

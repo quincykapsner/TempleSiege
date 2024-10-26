@@ -11,7 +11,7 @@ public class SwordAttack : MonoBehaviour
     public Collider2D swordCollider;
 
     public void Start() {
-        //swordCollider = GetComponent<Collider2D>();
+        swordCollider = GetComponent<Collider2D>();
         swordCollider.enabled = false; // make sure it starts disabled
     }
 
