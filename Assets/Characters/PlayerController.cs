@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public float collisionOffset = 0.02f;
     public ContactFilter2D movementFilter;
     public SwordAttack swordAttack;
+    bool canMove = true;
 
     Vector2 movementInput;
     Rigidbody2D rb;
@@ -21,12 +23,13 @@ public class PlayerController : MonoBehaviour
     private const string lastHorizontal = "LastHorizontal";
     private const string lastVertical = "LastVertical";
 
-    bool canMove = true;
+    private GameController gameController;
 
     // Start is called before the first frame update
     void Start() {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        gameController = FindObjectOfType<GameController>();
     }
 
     private void FixedUpdate() {
@@ -126,5 +129,18 @@ public class PlayerController : MonoBehaviour
 
     public void UnlockMovement() {
         canMove = true;
+    }
+
+    // ========= player death ========= 
+
+    public void Death() {
+        // must be separate from defeated to allow for animations
+        animator.SetTrigger("Defeated");
+    }
+
+    public void Defeated() {
+        // called in animation event
+        canMove = false; // disable player movement
+        gameController.GameOver(); // show game over screen
     }
 }

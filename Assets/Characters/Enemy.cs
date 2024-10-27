@@ -37,6 +37,7 @@ public class Enemy : MonoBehaviour, IDamageable
     }
 
     public void Defeated() {
+        // called in animation event
         Destroy(gameObject);
     }
 

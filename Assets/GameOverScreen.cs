@@ -8,9 +8,13 @@ public class GameOverScreen : MonoBehaviour
 {
     public Text pointsText;
 
-    public void Setup(int score) {
+    public void ShowGameOverScreen(int score) {
         gameObject.SetActive(true);
         pointsText.text = "BARRIER " + score.ToString() + "% CHARGED";
+    }
+
+    public void HideGameOverScreen() {
+        gameObject.SetActive(false);
     }
 
     public void RestartButton() {

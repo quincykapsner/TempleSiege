@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Statue : MonoBehaviour, IDamageable
@@ -17,6 +18,8 @@ public class Statue : MonoBehaviour, IDamageable
     }
     public float health = 100f;
 
+    public float charge = 0;
+
     public void OnHit(float damage, Vector2 knockback) { 
         Health -= damage;
         // no knockback for statue so just ignore it
@@ -29,17 +32,14 @@ public class Statue : MonoBehaviour, IDamageable
 
     public void Defeated() { 
         // game over stuff
+        // ==== camera focus on it and it turn white (and fade out?)
+        // ==== call playercontroller.death ?
     } 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void FixedUpdate() {
+        charge += 1;
+        if (charge >= 100) {
+            // ==== success game over screen
+        }
     }
 }
