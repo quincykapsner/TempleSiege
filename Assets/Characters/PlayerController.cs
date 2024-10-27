@@ -23,13 +23,19 @@ public class PlayerController : MonoBehaviour
     private const string lastHorizontal = "LastHorizontal";
     private const string lastVertical = "LastVertical";
 
-    private GameController gameController;
+    // List of game over messages
+    private List<string> gameOverMessages = new List<string>
+    {
+        "Her magic cannot reach beyond the temple.",
+        "Were you listening when she mentioned the barrier?", 
+        "There aren't any secrets out there, just death.",
+        "You have abandoned your goddess."
+    };
 
     // Start is called before the first frame update
     void Start() {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        gameController = FindObjectOfType<GameController>();
     }
 
     private void FixedUpdate() {
@@ -141,6 +147,7 @@ public class PlayerController : MonoBehaviour
     public void Defeated() {
         // called in animation event
         canMove = false; // disable player movement
-        gameController.GameOver(); // show game over screen
+        string message = gameOverMessages[Random.Range(0, gameOverMessages.Count)];
+        FindObjectOfType<GameController>().GameOver(message); // show game over screen
     }
 }

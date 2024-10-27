@@ -7,9 +7,11 @@ using UnityEngine.SceneManagement;
 public class GameOverScreen : MonoBehaviour
 {
     public Text pointsText;
+    public Text causeText;
 
-    public void ShowGameOverScreen(int score) {
+    public void ShowGameOverScreen(int score, string cause) {
         gameObject.SetActive(true);
+        causeText.text = cause; 
         pointsText.text = "BARRIER " + score.ToString() + "% CHARGED";
     }
 

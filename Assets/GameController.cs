@@ -7,14 +7,16 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public GameOverScreen gameOverScreen;
+    public Statue statue;
 
-    public void GameOver() {
-        gameOverScreen.ShowGameOverScreen(14); // 14 just for testing
+    public void GameOver(string cause) {
+        gameOverScreen.ShowGameOverScreen(statue.getScore(), cause); 
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        statue = FindObjectOfType<Statue>();
         gameOverScreen.HideGameOverScreen();
     }
 }
