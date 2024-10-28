@@ -11,7 +11,8 @@ public class PlayerController : MonoBehaviour
     public float collisionOffset = 0.02f;
     public ContactFilter2D movementFilter;
     public SwordAttack swordAttack;
-    bool canMove = true;
+    public bool canMove = true;
+    public bool canAttack = true;
 
     Vector2 movementInput;
     Rigidbody2D rb;
@@ -66,6 +67,10 @@ public class PlayerController : MonoBehaviour
                 animator.SetFloat(horizontal, 0);
                 animator.SetFloat(vertical, 0);
             }
+        } else {
+            // if player is not allowed to move, set the animator values to 0
+            animator.SetFloat(horizontal, 0);
+            animator.SetFloat(vertical, 0);
         }
     }
 
@@ -96,7 +101,9 @@ public class PlayerController : MonoBehaviour
     // ========= sword attack stuff =========
 
     void OnFire() {
-        animator.SetTrigger("SwordAttack");
+        if (canAttack) {
+            animator.SetTrigger("SwordAttack");
+        }
     }
 
     public void SwordAttack() {

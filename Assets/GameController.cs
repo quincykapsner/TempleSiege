@@ -10,7 +10,12 @@ public class GameController : MonoBehaviour
     public Statue statue;
 
     public void GameOver(string cause) {
+        statue.chargeRate = 0; // stop charging
         gameOverScreen.ShowGameOverScreen(statue.getScore(), cause); 
+    }
+
+    public void Win() {
+        SceneManager.LoadScene("Credits");
     }
 
     // Start is called before the first frame update

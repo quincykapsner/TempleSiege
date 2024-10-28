@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Statue : MonoBehaviour, IDamageable
 {
@@ -45,22 +46,27 @@ public class Statue : MonoBehaviour, IDamageable
 
     public void Defeated() { 
         // game over 
-        chargeRate = 0; // stop charging
         string message = gameOverMessages[Random.Range(0, gameOverMessages.Count)];
         FindObjectOfType<GameController>().GameOver(message); 
     } 
 
     public void Win() {
-        // in case i wanna do animation or something
-        // camera focus on it and it turn white (and fade out?)
+        chargeRate = 0; // stop charging
+        // kill all enemies
+        Enemy[] enemies = FindObjectsOfType<Enemy>();
+        foreach (Enemy enemy in enemies) {
+            enemy.Death();
+        }
+        // play some victory music
+        // fade to whitish cyan?
+        // maybe if i can figure out camera stuff do that - maybe secondary camera?
+        FindObjectOfType<GameController>().Win();
     }
 
     void FixedUpdate() {
         charge += chargeRate;
         if (charge >= 100) {
-            // ==== success game over screen
-            
+            Win();
         }
     }
-
 }
