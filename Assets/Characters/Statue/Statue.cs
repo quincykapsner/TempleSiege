@@ -17,7 +17,8 @@ public class Statue : MonoBehaviour, IDamageable
             return health;
         }
     }
-    public float health = 100f;
+    public float health;
+    public float maxHealth = 100f;
 
     public float charge = 0f;
     public float chargeRate = 0.01f;
@@ -44,7 +45,21 @@ public class Statue : MonoBehaviour, IDamageable
         return (int)charge;
     }
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        health = maxHealth;
+    }
+
+    void FixedUpdate() {
+        charge += chargeRate;
+        if (charge >= 100) {
+            Win();
+        }
+    }
+    
     public void Defeated() { 
+        chargeRate = 0; // stop charging
         // game over 
         string message = gameOverMessages[Random.Range(0, gameOverMessages.Count)];
         FindObjectOfType<GameController>().GameOver(message); 
@@ -61,12 +76,5 @@ public class Statue : MonoBehaviour, IDamageable
         // fade to whitish cyan?
         // maybe if i can figure out camera stuff do that - maybe secondary camera?
         FindObjectOfType<GameController>().Win();
-    }
-
-    void FixedUpdate() {
-        charge += chargeRate;
-        if (charge >= 100) {
-            Win();
-        }
     }
 }

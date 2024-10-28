@@ -9,6 +9,13 @@ public class GameController : MonoBehaviour
     public GameOverScreen gameOverScreen;
     public Statue statue;
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        statue = FindObjectOfType<Statue>();
+        gameOverScreen.HideGameOverScreen();
+    }
+
     public void GameOver(string cause) {
         statue.chargeRate = 0; // stop charging
         gameOverScreen.ShowGameOverScreen(statue.getScore(), cause); 
@@ -16,12 +23,5 @@ public class GameController : MonoBehaviour
 
     public void Win() {
         SceneManager.LoadScene("Credits");
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        statue = FindObjectOfType<Statue>();
-        gameOverScreen.HideGameOverScreen();
     }
 }
