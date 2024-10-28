@@ -148,8 +148,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.010643095, y: 0.021531522}
-  m_Size: {x: 0.15222448, y: 0.17061841}
+  m_Offset: {x: 0.011455089, y: 0.04183106}
+  m_Size: {x: 0.17983186, y: 0.24207282}
   m_Direction: 0
 --- !u!95 &4235128976942702190
 Animator:
@@ -283,5 +283,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   knockbackForce: 0
-  reach: 0.15
+  reach: 0.2
   swordCollider: {fileID: 1203447312370206880}
