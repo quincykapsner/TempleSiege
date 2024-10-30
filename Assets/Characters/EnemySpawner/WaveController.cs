@@ -6,9 +6,9 @@ using UnityEngine;
 public class WaveController : MonoBehaviour
 {
     public EnemySpawner[] spawners;
-    public int currentWave = 1;
-    private bool waveInProgress = false;
-    public float waveDelay = 30f; // wait time between waves
+    private int currentWave = 1;
+    public float waveDuration = 30f;
+    public float spawnInterval = 6f;
 
     // Start is called before the first frame update
     void Start()
@@ -16,24 +16,23 @@ public class WaveController : MonoBehaviour
         StartCoroutine(StartWaves());
     }
 
-    IEnumerator StartWaves()
-    {
-        while (currentWave <= 5) // hardcoded for 5 waves
-        {
-            waveInProgress = true;
-            SpawnWave(currentWave);
-            yield return new WaitUntil(() => !waveInProgress);
-            yield return new WaitForSeconds(waveDelay); // wait time between waves
+    IEnumerator StartWaves() { 
+        while (currentWave <= 3) {
+            StartCoroutine(SpawnEnemies(currentWave));
+            yield return new WaitForSeconds(waveDuration);
             currentWave++;
         }
-        Debug.Log("all waves completed"); // all waves complete
+        Debug.Log("all waves completed"); 
     }
 
-    void SpawnWave(int wave)
-    {
-        foreach (var spawner in spawners)
-        {
-            spawner.SpawnWave(wave, () => waveInProgress = false);
+    IEnumerator SpawnEnemies(int wave) {
+        float elapsedTime = 0f;
+        while (elapsedTime < waveDuration) {
+            foreach (var spawner in spawners) {
+                spawner.SpawnRandomEnemy(wave);
+            }
+            yield return new WaitForSeconds(spawnInterval);
+            elapsedTime += spawnInterval;
         }
     }
 }
