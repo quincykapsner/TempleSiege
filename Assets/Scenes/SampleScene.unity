@@ -20868,8 +20868,8 @@ MonoBehaviour:
   - {fileID: 2064088316}
   - {fileID: 1681416181}
   - {fileID: 1504990432}
-  waveDuration: 30
-  spawnInterval: 6
+  currentWave: 1
+  waveDelay: 15
 --- !u!1 &533501376
 GameObject:
   m_ObjectHideFlags: 0

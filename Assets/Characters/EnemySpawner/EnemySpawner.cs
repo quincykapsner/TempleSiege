@@ -13,17 +13,14 @@ public class EnemySpawner : MonoBehaviour
 
         switch (wave) {
             case 1:
-                // wave 1 can only spawn orc1
                 enemy = orc1;
                 break;
             case 2:
-                // wave 2: orc1 or orc2
                 enemy = Random.Range(0, 2) == 0 ? orc1 : orc2;
                 break;
             case 3:
-                // wave 3: orc1, orc2, or orc3 
                 int randomChoice = Random.Range(0, 3);
-                enemy = randomChoice == 0 ? orc1 : randomChoice == 1 ? orc2 : orc3; 
+                enemy = randomChoice == 0 ? orc1 : randomChoice == 1 ? orc2 : orc3;  // Randomly orc1, orc2, or orc3 in wave 3
                 break;
             default:
                 break;

@@ -29,13 +29,11 @@ public class Orc2 : Enemy
     void FixedUpdate() {
         // if allowed to move
         if (canMove) {
-            Vector2 targetPoint = Vector2.zero; // needed bc statue transform position is a lil off model
             Vector2 direction = Vector2.zero;
 
             if (statue != null) {
                 // if statue exists, move towards statue
-                targetPoint = statue.GetComponent<Collider2D>().ClosestPoint(transform.position); // get closest point on statue hitbox
-                direction = (targetPoint - (Vector2)transform.position).normalized; // calculate direction towards statue
+                direction = (statue.transform.position - transform.position).normalized; // calculate direction towards statue
                 rb.AddForce(direction * moveSpeed * Time.deltaTime); // move towards statue
             }
 
@@ -102,8 +100,7 @@ public class Orc2 : Enemy
         LockMovement();
 
         // determine attack direction based on direction to statue
-        Vector2 targetPoint = statue.GetComponent<Collider2D>().ClosestPoint(transform.position); // get closest point on statue hitbox
-        Vector2 attackDirection = (targetPoint - (Vector2)transform.position).normalized;
+        Vector2 attackDirection = (statue.transform.position - transform.position).normalized;
         if (Mathf.Abs(attackDirection.x) > Mathf.Abs(attackDirection.y)) {
             // prioritize horizontal direction
             if (attackDirection.x > 0) {
