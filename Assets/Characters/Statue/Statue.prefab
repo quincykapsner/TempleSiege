@@ -262,8 +262,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  maxHealth: 100
   charge: 0
-  chargeRate: 0.01
+  chargeRate: 0.02
 --- !u!1 &7777613771751810507
 GameObject:
   m_ObjectHideFlags: 0

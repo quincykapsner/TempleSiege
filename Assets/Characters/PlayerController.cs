@@ -102,6 +102,7 @@ public class PlayerController : MonoBehaviour
 
     void OnFire() {
         if (canAttack) {
+            canAttack = false;
             animator.SetTrigger("SwordAttack");
         }
     }
@@ -134,6 +135,7 @@ public class PlayerController : MonoBehaviour
         // called in animation event at end of attack animation
         UnlockMovement();
         swordAttack.StopAttack();
+        canAttack = true;
     }
 
     public void LockMovement() {

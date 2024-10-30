@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Statue : MonoBehaviour, IDamageable
 {
+    private bool isDefeated = false;
     public float Health {
         set {
             health = value;
@@ -17,7 +18,7 @@ public class Statue : MonoBehaviour, IDamageable
             return health;
         }
     }
-    public float health;
+    public float health; 
     public float maxHealth = 100f;
 
     public float charge = 0f;
@@ -59,6 +60,9 @@ public class Statue : MonoBehaviour, IDamageable
     }
     
     public void Defeated() { 
+        if (isDefeated) return; // only do this once
+
+        isDefeated = true;
         chargeRate = 0; // stop charging
         // game over 
         string message = gameOverMessages[Random.Range(0, gameOverMessages.Count)];
