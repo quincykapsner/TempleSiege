@@ -33,10 +33,13 @@ public class PlayerController : MonoBehaviour
         "You have abandoned your goddess."
     };
 
+    AudioManager audioManager;
+
     // Start is called before the first frame update
     void Start() {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
     }
 
     private void FixedUpdate() {
@@ -102,6 +105,7 @@ public class PlayerController : MonoBehaviour
 
     void OnFire() {
         if (canAttack) {
+            audioManager.PlaySFX(audioManager.playerAttack);
             animator.SetTrigger("SwordAttack");
         }
     }

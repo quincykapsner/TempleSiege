@@ -6,10 +6,14 @@ using UnityEngine.UI;
 
 public class Statue : MonoBehaviour, IDamageable
 {
+    bool defeated = false;
+    bool critical = false;
     public float Health {
         set {
             health = value;
-            if (health <= 0) {
+            if (health <= maxHealth / 5) {
+                CriticalHealth();
+            } else if (health <= 0) {
                 Defeated();
             }
         }
@@ -32,6 +36,8 @@ public class Statue : MonoBehaviour, IDamageable
         "Eyy I'm gettin' destroyed by orcs ovah here!"
     };
 
+    AudioManager audioManager;
+
     public void OnHit(float damage, Vector2 knockback) { 
         Health -= damage;
         // no knockback for statue so just ignore it
@@ -48,6 +54,7 @@ public class Statue : MonoBehaviour, IDamageable
     // Start is called before the first frame update
     void Start()
     {
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         health = maxHealth;
     }
 
@@ -57,9 +64,20 @@ public class Statue : MonoBehaviour, IDamageable
             Win();
         }
     }
+
+    public void CriticalHealth() {
+        if (critical) return;
+        
+        critical = true;
+        audioManager.PlaySFX(audioManager.criticalHealth);
+    }
     
     public void Defeated() { 
+        if (defeated) return;
+
+        defeated = true;
         chargeRate = 0; // stop charging
+        audioManager.PlaySFX(audioManager.gameOver);
         // game over 
         string message = gameOverMessages[Random.Range(0, gameOverMessages.Count)];
         FindObjectOfType<GameController>().GameOver(message); 
@@ -67,14 +85,12 @@ public class Statue : MonoBehaviour, IDamageable
 
     public void Win() {
         chargeRate = 0; // stop charging
+        audioManager.PlaySFX(audioManager.win);
         // kill all enemies
         Enemy[] enemies = FindObjectsOfType<Enemy>();
         foreach (Enemy enemy in enemies) {
             enemy.Death();
         }
-        // play some victory music
-        // fade to whitish cyan?
-        // maybe if i can figure out camera stuff do that - maybe secondary camera?
         FindObjectOfType<GameController>().Win();
     }
 }

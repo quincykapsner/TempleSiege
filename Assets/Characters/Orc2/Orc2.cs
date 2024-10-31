@@ -16,6 +16,8 @@ public class Orc2 : Enemy
     private const string lastHorizontal = "LastHorizontal";
     private const string lastVertical = "LastVertical";
 
+    AudioManager audioManager;
+
     // Start is called before the first frame update
     public override void Start()
     { 
@@ -24,6 +26,7 @@ public class Orc2 : Enemy
         statue = GameObject.FindGameObjectWithTag("Statue");
         hitboxCollider = GetComponent<CapsuleCollider2D>();
         animator = GetComponent<Animator>();
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
     }
 
     void FixedUpdate() {
@@ -92,6 +95,7 @@ public class Orc2 : Enemy
 
     private void PerformAttack() {
         // attack animation
+        audioManager.PlaySFX(audioManager.orcAttack);
         animator.SetTrigger("SwordAttack");
     }
 
