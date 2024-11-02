@@ -39,10 +39,12 @@ public class Orc3 : Enemy
         // if allowed to move
         if(canMove){
             Vector2 direction = Vector2.zero;
+            Vector2 target = Vector2.zero;
 
             if (player != null) {
                 // if player is detected, move towards player
-                direction = (player.transform.position - transform.position).normalized; // calculate direction towards player
+                target = statue.GetComponent<Collider2D>().ClosestPoint(transform.position); // get closest point on statue collider
+                direction = (target - (Vector2)transform.position).normalized; // calculate direction towards statue
                 rb.AddForce(direction * moveSpeed * Time.deltaTime); // move towards player
 
             } else if (statue != null) {
@@ -134,7 +136,8 @@ public class Orc3 : Enemy
         LockMovement();
 
         // determine attack direction based on direction to statue
-        Vector2 attackDirection = (statue.transform.position - transform.position).normalized;
+        Vector2 target = statue.GetComponent<Collider2D>().ClosestPoint(transform.position); // get closest point on statue collider
+        Vector2 attackDirection = (target - (Vector2)transform.position).normalized;
         if (Mathf.Abs(attackDirection.x) > Mathf.Abs(attackDirection.y)) {
             // prioritize horizontal direction
             if (attackDirection.x > 0) {

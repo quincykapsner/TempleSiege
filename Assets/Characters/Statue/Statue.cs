@@ -11,9 +11,11 @@ public class Statue : MonoBehaviour, IDamageable
     public float Health {
         set {
             health = value;
-            if (health <= maxHealth / 5) {
+            if (health <= maxHealth / 5 && !critical) {
+                critical = true;
                 CriticalHealth();
-            } else if (health <= 0) {
+            } else if (health <= 0 && !defeated) {
+                defeated = true;
                 Defeated();
             }
         }
@@ -66,16 +68,10 @@ public class Statue : MonoBehaviour, IDamageable
     }
 
     public void CriticalHealth() {
-        if (critical) return;
-        
-        critical = true;
         audioManager.PlaySFX(audioManager.criticalHealth);
     }
     
     public void Defeated() { 
-        if (defeated) return;
-
-        defeated = true;
         chargeRate = 0; // stop charging
         audioManager.PlaySFX(audioManager.gameOver);
         // game over 
