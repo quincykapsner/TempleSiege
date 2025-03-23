@@ -1,6 +1,8 @@
 # TempleSiege
 CS583 2D Game
 
+**Extracted game and submission video under Finished folder**
+
 Notes about the game that are hard to show in the video:
 - Game over screen has a pool of different messages to draw from based on what you lost to
 - Enemies summoned are semi-randomized (restricted by how far along the game is)
