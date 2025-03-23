@@ -1,13 +1,13 @@
 # TempleSiege
 CS583 2D Game
   
-**How to get the game**
+#### How to get the game
 1. Go to [exports>Temple Siege.exe](https://github.com/quincykapsner/TempleSiege/blob/main/export/Temple%20Siege.exe)
 2. Right click "Raw"
 3. Save link as...
 4. Save wherever you would like and play! 
   
-**School stuff**  
+#### School stuff  
 Notes about the game that are hard to show in the video:
 - Game over screen has a pool of different messages to draw from based on what you lost to
 - Enemies summoned are semi-randomized (restricted by how far along the game is)
